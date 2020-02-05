@@ -33,3 +33,20 @@ echo "90" | sudo tee /sys/devices/system/cpu/intel_pstate/max_perf_pct
 
 I don't want to do this until I have evidence over the day that the computer
 is always hot.
+
+## How do I generate the images?
+
+Once the data is generated in [results.json](results.json) you can
+generate it as follows:
+
+```bash
+$ python generate.py
+```
+
+It will output to a docs folder, and I wrote the README.md to render the images
+with some comments. Note that you'll need matplotlib and numpy.
+
+```bash
+pip install matplotlib
+pip install numpy
+```
